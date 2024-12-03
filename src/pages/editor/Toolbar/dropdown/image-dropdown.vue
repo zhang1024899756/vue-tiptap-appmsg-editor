@@ -1,5 +1,5 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
 
 // 图片

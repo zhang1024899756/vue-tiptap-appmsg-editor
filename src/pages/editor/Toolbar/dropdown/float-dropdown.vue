@@ -1,7 +1,7 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 
 // 浮动下拉菜单
 const floatDropdownRef = ref();
@@ -30,7 +30,7 @@ const handleUpdateFloatState = ({ editor }) => {
 
 editor.on(
   "transaction",
-  throttle(handleUpdateFloatState, 240, { leading: false })
+  throttle(handleUpdateFloatState, 240, { leading: false }),
 );
 </script>
 

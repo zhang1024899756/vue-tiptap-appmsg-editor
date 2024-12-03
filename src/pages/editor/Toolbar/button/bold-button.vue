@@ -1,6 +1,6 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
-import { throttle } from "lodash-es";
+import { editor } from "../../editor.js";
+import { throttle } from "lodash";
 
 // 切换加粗
 const isBoldActive = ref(false);
@@ -18,7 +18,7 @@ const handleUpdateBoldState = ({ editor }) => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateBoldState, 240, { leading: false })
+  throttle(handleUpdateBoldState, 240, { leading: false }),
 );
 </script>
 

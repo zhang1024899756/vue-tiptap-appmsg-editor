@@ -1,8 +1,8 @@
 <script setup>
 import { Pickr } from "@/plugins/pickr/index.js";
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { COLOR_LIST } from "@/constants/colorList.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 
 // 文字颜色
 const colorPickerRef = ref(); // picker按钮
@@ -48,7 +48,7 @@ const handleUpdateColorState = ({ editor }) => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateColorState, 240, { leading: false })
+  throttle(handleUpdateColorState, 240, { leading: false }),
 );
 </script>
 

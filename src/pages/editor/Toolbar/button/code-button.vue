@@ -1,6 +1,6 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
-import { throttle } from "lodash-es";
+import { editor } from "../../editor.js";
+import { throttle } from "lodash";
 
 // 格式化代码块
 const handleInsertCodeBlock = () => {
@@ -18,7 +18,7 @@ const handleUpdateCodeBlockState = () => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateCodeBlockState, 240, { leading: false })
+  throttle(handleUpdateCodeBlockState, 240, { leading: false }),
 );
 </script>
 

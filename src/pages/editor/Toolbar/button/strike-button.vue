@@ -1,6 +1,6 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
-import { throttle } from "lodash-es";
+import { editor } from "../../editor.js";
+import { throttle } from "lodash";
 
 // 切换斜体
 const isStrikeActive = ref(false);
@@ -19,7 +19,7 @@ const handleUpdateStrikeState = ({ editor }) => {
 
 editor.on(
   "transaction",
-  throttle(handleUpdateStrikeState, 240, { leading: false })
+  throttle(handleUpdateStrikeState, 240, { leading: false }),
 );
 </script>
 

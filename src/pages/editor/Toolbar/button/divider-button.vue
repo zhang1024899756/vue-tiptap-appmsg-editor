@@ -1,5 +1,5 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 
 // 插入分隔线
 const handleInsertDivider = () => {

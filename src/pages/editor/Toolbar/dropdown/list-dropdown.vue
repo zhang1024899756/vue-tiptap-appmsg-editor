@@ -1,7 +1,7 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 
 // 列表下拉框
 const listDropdownRef = ref();

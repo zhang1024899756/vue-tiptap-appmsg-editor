@@ -10,6 +10,7 @@
     "lint": "eslint ./src"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.24.1",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-prettier": "^3.1.3",
@@ -17,10 +18,12 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.18",
     "cssnano": "^6.1.0",
+    "eslint": "^8.36.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^9.23.0",
     "less": "^4.2.0",
+    "prettier": "^3.3.3",
     "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.72.0",
     "unplugin-auto-import": "^0.17.5",
@@ -45,7 +48,7 @@
     "@tiptap/pm": "^2.1.12",
     "@tiptap/starter-kit": "^2.1.12",
     "@types/vue-router": "^2.0.0",
-    "lodash-es": "^4.17.21",
+    "lodash": "^4.17.21",
     "pinia": "^2.1.7",
     "tiptap-extension-bullet-list": "^1.0.0",
     "tiptap-extension-float": "^1.0.0",
@@ -62,6 +65,7 @@
     "tiptap-extension-section": "^1.0.0",
     "tiptap-extension-trailing-node": "^1.0.0",
     "tiptap-extension-video": "^1.0.0",
+    "vue": "^3.2.47",
     "vue-router": "^4.3.0"
   }
 }

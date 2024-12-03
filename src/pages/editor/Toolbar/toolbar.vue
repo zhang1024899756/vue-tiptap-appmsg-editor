@@ -18,42 +18,38 @@ import BottomRowSpacingDropdown from "./dropdown/bottom-row-spacing-dropdown.vue
 import LineHeightDropdown from "./dropdown/line-height-dropdown.vue";
 import ListDropdown from "./dropdown/list-dropdown.vue";
 import FloatDropdown from "./dropdown/float-dropdown.vue";
-import EmojiDropdown from "./dropdown/emoji-dropdown.vue";
+// import EmojiDropdown from "./dropdown/emoji-dropdown.vue";
+import ImageDropdown from "./dropdown/image-dropdown.vue";
+import VideoButton from "./button/video-button.vue";
+import LinkButton from "./button/link-button.vue";
 </script>
 
 <template>
   <div class="toolbar-wrapper">
     <div id="toolbar">
-      <div class="btn-group">
-        <undo-button class="edit-btn" />
-        <redo-button class="edit-btn" />
-      </div>
-      <div class="btn-group">
-        <clear-format-button class="edit-btn" />
-        <painter-button class="edit-btn" />
-      </div>
-      <div class="btn-group">
-        <fontsize-dropdown class="edit-btn" />
-        <bold-button class="edit-btn" />
-        <italic-button class="edit-btn" />
-        <underline-button class="edit-btn" />
-        <strike-button class="edit-btn" />
-        <color-picker-button class="edit-btn" />
-        <highlight-picker-button class="edit-btn" />
-      </div>
-      <div class="btn-group">
-        <align-dropdown class="edit-btn" />
-        <top-row-spacing-dropdown class="edit-btn" />
-        <bottom-row-spacing-dropdown class="edit-btn" />
-        <line-height-dropdown class="edit-btn" />
-      </div>
-      <div class="btn-group">
-        <divider-button class="edit-btn" />
-        <list-dropdown class="edit-btn" />
-        <float-dropdown class="edit-btn" />
-        <code-button class="edit-btn" />
-        <emoji-dropdown class="edit-btn" />
-      </div>
+      <undo-button class="edit-btn" />
+      <redo-button class="edit-btn" />
+      <clear-format-button class="edit-btn" />
+      <painter-button class="edit-btn" />
+      <fontsize-dropdown class="edit-btn" />
+      <bold-button class="edit-btn" />
+      <italic-button class="edit-btn" />
+      <underline-button class="edit-btn" />
+      <strike-button class="edit-btn" />
+      <color-picker-button class="edit-btn" />
+      <highlight-picker-button class="edit-btn" />
+      <align-dropdown class="edit-btn" />
+      <top-row-spacing-dropdown class="edit-btn" />
+      <bottom-row-spacing-dropdown class="edit-btn" />
+      <line-height-dropdown class="edit-btn" />
+      <divider-button class="edit-btn" />
+      <list-dropdown class="edit-btn" />
+      <float-dropdown class="edit-btn" />
+      <code-button class="edit-btn" />
+      <image-dropdown class="edit-btn" />
+      <video-button class="edit-btn" />
+      <link-button class="edit-btn" />
+      <!-- <emoji-dropdown class="edit-btn" /> -->
     </div>
   </div>
 </template>
@@ -63,17 +59,16 @@ import EmojiDropdown from "./dropdown/emoji-dropdown.vue";
 .toolbar-wrapper {
   display: flex;
   width: 100%;
-  min-width: 1400px;
-  padding: 8px 8px 8px 20vw;
-  position: absolute;
-  top: 50px;
+  padding: 8px;
   background-color: #fafafa;
   z-index: 9;
+  flex-wrap: wrap;
 }
 
 #toolbar {
   display: flex;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 8px 4px;
 }
 
 .btn-group {
@@ -92,6 +87,7 @@ import EmojiDropdown from "./dropdown/emoji-dropdown.vue";
   font-size: 18px;
   line-height: 24px;
   border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .edit-btn:hover {

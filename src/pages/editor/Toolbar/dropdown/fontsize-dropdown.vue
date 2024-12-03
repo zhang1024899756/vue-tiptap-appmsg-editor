@@ -1,7 +1,7 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 
 const dropdownSizeRef = ref();
 onMounted(() => {
@@ -31,7 +31,7 @@ const handleUpdateFontsizeState = ({ editor, transaction }) => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateFontsizeState, 240, { leading: false })
+  throttle(handleUpdateFontsizeState, 240, { leading: false }),
 );
 </script>
 

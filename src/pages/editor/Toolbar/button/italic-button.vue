@@ -1,6 +1,6 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
-import { throttle } from "lodash-es";
+import { editor } from "../../editor.js";
+import { throttle } from "lodash";
 
 // 切换斜体
 const isItalicActive = ref(false);
@@ -19,7 +19,7 @@ const handleUpdateItalicState = ({ editor }) => {
 
 editor.on(
   "transaction",
-  throttle(handleUpdateItalicState, 240, { leading: false })
+  throttle(handleUpdateItalicState, 240, { leading: false }),
 );
 </script>
 

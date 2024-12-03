@@ -1,5 +1,5 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Modal } from "@/plugins/modal/index.js";
 import { Tabs } from "@/plugins/tabs/index.js";
 

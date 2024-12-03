@@ -1,7 +1,7 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 import { SPACING_LIST } from "@/constants/spacingList.js";
 
 // 段后距
@@ -43,7 +43,7 @@ const handleUpdateSpacing = ({ editor, transaction }) => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateSpacing, 240, { leading: false })
+  throttle(handleUpdateSpacing, 240, { leading: false }),
 );
 </script>
 

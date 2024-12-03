@@ -1,6 +1,6 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
-import { throttle } from "lodash-es";
+import { editor } from "../../editor.js";
+import { throttle } from "lodash";
 
 // 切换斜体
 const isUnderlineActive = ref(false);
@@ -18,7 +18,7 @@ const handleUpdateUnderlineState = ({ editor }) => {
 };
 editor.on(
   "transaction",
-  throttle(handleUpdateUnderlineState, 240, { leading: false })
+  throttle(handleUpdateUnderlineState, 240, { leading: false }),
 );
 </script>
 

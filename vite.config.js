@@ -1,4 +1,4 @@
-import path from "node:path";
+import path from "path";
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";
 import svgLoader from "vite-svg-loader";
@@ -50,7 +50,7 @@ export default defineConfig(({ command, mode }) => {
     ],
     server: {
       host: true,
-      port: 5173,
+      port: 5174,
       proxy: env.VITE_API_BASE_URL,
     },
     build: {

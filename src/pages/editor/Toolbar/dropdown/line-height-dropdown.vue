@@ -1,7 +1,7 @@
 <script setup>
-import { editor } from "@/pages/editor/editor.js";
+import { editor } from "../../editor.js";
 import { Dropdown } from "@/plugins/dropdown/index.js";
-import { throttle } from "lodash-es";
+import { throttle } from "lodash";
 
 // 行高下拉菜单
 const lineHeightDropdownRef = ref();
@@ -41,7 +41,7 @@ const handleUpdateLineHeight = ({ editor, transaction }) => {
 
 editor.on(
   "transaction",
-  throttle(handleUpdateLineHeight, 240, { leading: false })
+  throttle(handleUpdateLineHeight, 240, { leading: false }),
 );
 </script>
 
