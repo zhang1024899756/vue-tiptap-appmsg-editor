@@ -36,7 +36,8 @@ onMounted(() => {
 });
 
 // 高亮颜色状态回显
-const handleUpdateHighlightState = ({ editor }) => {
+const handleUpdateHighlightState = ({ editor, transaction }) => {
+  if (transaction.updated === 0) return;
   const colorValue = editor.getAttributes("highlight").color;
   if (colorValue) {
     picker.setColor(colorValue, true);

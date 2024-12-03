@@ -36,7 +36,8 @@ onMounted(() => {
 });
 
 // 回显颜色状态
-const handleUpdateColorState = ({ editor }) => {
+const handleUpdateColorState = ({ editor, transaction }) => {
+  if (transaction.updated === 0) return;
   const colorValue = editor.getAttributes("textStyle").color;
   if (colorValue) {
     picker.setColor(colorValue, true);
